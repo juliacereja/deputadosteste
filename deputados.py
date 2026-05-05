@@ -3,6 +3,7 @@ import pandas as pd
 df = pd.read_csv('deputados_2022.csv')
 
 st.markdown("<h1 style='text-align: center;'>Deputados 2022</h1>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center;'>Verifique os deputados de 2022</h1>", unsafe_allow_html=True)
 
 st.markdown("<h3 style='text-align: center;'>Filtrar por partido</h1>", unsafe_allow_html=True)
 partido = st.selectbox("Escolha um partido", df["partido"].dropna().unique())
