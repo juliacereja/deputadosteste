@@ -9,8 +9,4 @@ df_filtrado = df[df["partido"] == partido]
 st.subheader(f"Deputados do partido {partido}")
 st.write(df_filtrado)
 
-st.metric("Partido", dados["partido"].values[0])
-st.metric("Nome civil", dados["nome_civil"].values[0])
-st.metric("Cpf", dados["cpf"].values[0])
-st.metric("Estado", dados["uf"].values[0])
-st.metric("Sexo", dados["sexo"].values[0])
+
