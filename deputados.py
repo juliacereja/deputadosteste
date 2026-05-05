@@ -3,7 +3,7 @@ import pandas as pd
 df = pd.read_csv('deputados_2022.csv')
 
 st.markdown("<h1 style='text-align: center;'>Deputados 2022</h1>", unsafe_allow_html=True)
-voluntario = st.selectbox("Escolha um voluntário", df["nome"])
+voluntario = st.selectbox("Escolha um partido", df["partido"])
 
 dados = df[df["nome"] == voluntario]
 st.write(dados)
