@@ -12,6 +12,7 @@ st.write(df_filtrado)
 uf = st.selectbox("Escolha um estado", df["uf"].dropna().unique())
 
 df_filtrado = df[df["uf"] == estado]
+estado = uf
 st.subheader(f"Deputados do estado {uf}")
 st.write(df_filtrado)
 
