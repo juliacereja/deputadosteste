@@ -7,5 +7,8 @@ voluntario = st.selectbox("Escolha um voluntário", df["nome"])
 dados = df[df["nome"] == voluntario]
 st.write(dados)
 
-st.metric("Idade", dados["partido"].values[0])
-st.metric("Peso", dados["nome_civil"].values[0])
+st.metric("Partido", dados["partido"].values[0])
+st.metric("Nome civil", dados["nome_civil"].values[0])
+st.metric("Cpf", dados["cpf"].values[0])
+st.metric("Estado", dados["uf"].values[0])
+st.metric("Sexo", dados["sexo"].values[0])
