@@ -3,10 +3,11 @@ import pandas as pd
 df = pd.read_csv('deputados_2022.csv')
 
 st.markdown("<h1 style='text-align: center;'>Deputados 2022</h1>", unsafe_allow_html=True)
-voluntario = st.selectbox("Escolha um partido", df["partido"])
+voluntario = st.selectbox("Escolha um partido", df["partido"].dropna().unique())
 
-dados = df[df["partido"] == partido]
-st.write(dados)
+df_filtrado = df[df["partido"] == partido]
+st.subheader(f"Deputados do partido {partido}")
+st.write(df_filtrado)
 
 st.metric("Partido", dados["partido"].values[0])
 st.metric("Nome civil", dados["nome_civil"].values[0])
